@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <article class="todo-app">
+            <header>
+                <h2>To-Do List <img src="images/icon.png" alt="To-do app icon"></h2>
+            </header>
+
+            <form class="row">
+                <label for="input-box" class="visually-hidden">Add a task</label>
+                <input type="text" id="input-box" placeholder="Add your text">
+                <button type="submit">Add</button>
+            </form>
+
+            <section aria-label="Task List">
+                <ul id="list-container">
+                    <!-- Dynamic tasks will be inserted here -->
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
