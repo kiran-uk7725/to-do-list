@@ -67,7 +67,7 @@ Ensure you have **Node.js** (version 18+ recommended) installed on your system.
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/kiran-uk7725/todo-list
+   git clone https://github.com/kiran-uk7725/to-do-list
    cd todo-list-typescript
    ```
 
