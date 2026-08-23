@@ -1,0 +1,24 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "description": "📝 Simple To-Do List App A lightweight, clean, and responsive To-Do List application built using vanilla web technologies. This project is perfect for keeping track of daily tasks with data persistence.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiran-uk7725/to-do-list.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kiran-uk7725/to-do-list/issues"
+  },
+  "homepage": "https://github.com/kiran-uk7725/to-do-list#readme",
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2"
+  }
+}

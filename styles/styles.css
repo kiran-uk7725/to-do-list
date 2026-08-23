@@ -1,0 +1,214 @@
+/* =========================
+   CSS Reset & Boilerplate
+   ========================= */
+
+/* 1. Box Sizing & reset */
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Root Custom Properties & Theme Setup */
+:root{
+    /* Typography */
+    --font-family: 'Poppins', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-size-title: 1.5rem;
+    --font-size-regular: 1rem;
+
+    /* Color palette */
+    --page-bg: linear-gradient(135deg, #153677, #4e085f);
+    --color-heading: #002765;
+    --color-search: #edeef0;
+    --color-action-btn: #ff5945;
+    --color-active-task: #555;
+    --color-completed-task: #888;
+    --color-delete: #e6e6e6;
+
+    /* padding */
+    --padding-block: .5em;
+    --padding-inline-btn: 1.57em;
+}
+
+/* CSS boilerplate and typography */
+img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+body{
+    min-height: 100vh;
+    background: var(--page-bg);
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-family);
+
+    /* Text rendering optimization */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h2{
+    font-size: var(--font-size-title);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-heading);
+}
+
+button{
+    font-weight: var(--font-weight-medium);
+}
+
+input,
+button{
+    font-family: inherit;
+}
+
+/* ================
+   Design & Layout
+   ================ */
+
+/* main container, todo-app container, header */
+
+header,
+.todo-app,
+.list-container{
+    display: flex;
+    gap: 1em;
+}
+
+.container{
+    width: 90%;
+    min-width: 300px;
+}
+
+.todo-app{
+    flex-direction: column;
+    margin-inline: auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.todo-icon{
+    width: 32px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* form, input & button */
+
+.row{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-search);
+    border-radius: 30px;
+    margin-bottom: 25px;
+}
+
+.row input{
+    font-size: var(--font-size-regular);
+    background: transparent;
+    border: none;
+    outline: none;
+    flex: 1 1 0px;
+    min-width: 0;
+    padding-block: var(--padding-block);
+    padding-left: 1em;
+}
+
+.row button{
+    border: none;
+    outline: none;
+    font-size: var(--font-size-regular);
+    padding: var(--padding-block) var(--padding-inline-btn);
+    background-color: var(--color-action-btn);
+    color: #fff;
+    border-radius: 30px;
+    flex-shrink: 0;
+}
+
+/* List container */
+
+.list-container{
+    flex-direction: column;
+}
+
+.list-container li {
+    list-style: none;
+    font-size: var(--font-size-regular);
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    color: var(--color-active-task);
+    /* border: solid magenta; */
+    padding-block: .5em;
+    padding-left: 3em;
+}
+
+.list-container li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url('../images/unchecked.png');
+    background-size: contain;
+    background-position: center;
+    top: 7px;
+    left: 10px;
+}
+
+.list-container li.checked {
+    color: var(--color-completed-task);
+    text-decoration: line-through;
+}
+
+.list-container li.checked::before{
+    background-image: url(../images/checked.png);
+}
+
+.list-container span{
+    position: absolute;
+    right: 0;
+    height: fit-content;
+    padding-inline: .5em;
+    border-radius: 50%;
+    text-align: center;
+    color: #555;
+}
+
+span:hover{
+    background-color: var(--color-action-btn);
+    color: #FFF;
+}
+
+@media (min-width: 480px){
+    :root{
+        --padding-block: 1em;
+        --padding-inline-btn: 3.125em;
+    }
+
+     .container{
+        max-width: 540px;
+    }
+}
