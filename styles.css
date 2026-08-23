@@ -1,0 +1,83 @@
+/* =========================
+   CSS Reset & Boilerplate
+   ========================= */
+
+/* 1. Box Sizing & reset */
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Root Custom Properties & Theme Setup */
+:root{
+    /* Typography */
+    --font-family: 'Poppins', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-size-title: 1.5rem;
+    --font-size-regular: 1rem;
+
+    /* Color palette */
+    --page-bg: linear-gradient(135deg, #153677, #4e085f);
+    --color-heading: #002765;
+    --color-search: #edeef0;
+    --color-action-btn: #ff5945;
+    --color-task: #555555;
+    --color-delete: #e6e6e6;
+}
+
+/* CSS boilerplate and typography */
+img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+body{
+    min-height: 100vh;
+    background: var(--page-bg);
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-family);
+
+    /* Text rendering optimization */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h2{
+    font-size: var(--font-size-title);
+    font-weight: var(--font-weight-semibold);
+}
+
+button{
+    font-weight: var(--font-weight-medium);
+}
+
+input,
+button{
+    font-family: inherit;
+}
+
+/* ================
+   Design & Layout
+   ================ */
+
+header,
+.todo-app{
+    display: flex;
+}
+
+.todo-app{
+    flex-direction: column;
+    width: 80%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 100px;
+}
