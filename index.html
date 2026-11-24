@@ -1,42 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet" />
 
     <!-- CSS stylesheet -->
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/styles.css" />
 
     <title>To-Do List App</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <main class="container">
-        <article class="todo-app">
-            <header>
-                <h2>To-Do List</h2>
-                <img class="todo-icon" src="images/icon.png" alt="To-do app icon">
-            </header>
+      <article class="todo-app">
+        <header>
+          <h2>To-Do List</h2>
+          <img class="todo-icon" src="images/icon.png" alt="To-do app icon" />
+        </header>
 
-            <form class="row">
-                <label for="input-box" class="visually-hidden">Add a task</label>
-                <input class="txt-input" type="text" name="todo" id="input-box" placeholder="Add your text">
-                <button class="submit-btn" type="submit">Add</button>
-            </form>
+        <form class="row">
+          <label for="input-box" class="visually-hidden">Add a task</label>
+          <input
+            class="txt-input"
+            type="text"
+            name="todo"
+            id="input-box"
+            placeholder="Add your text" />
+          <button class="submit-btn" type="submit">Add</button>
+        </form>
 
-            <section aria-label="Task List">
-                <ul class="list-container" id="list-container">
-                    <!-- Dynamic tasks will be inserted here -->
-                </ul>
-            </section>
-        </article>
+        <section aria-label="Task List">
+          <ul class="list-container" id="list-container">
+            <!-- Dynamic tasks will be inserted here -->
+          </ul>
+        </section>
+      </article>
     </main>
 
     <script type="module" src="./script/main.js" defer></script>
-</body>
+  </body>
 </html>
